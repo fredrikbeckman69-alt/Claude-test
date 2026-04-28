@@ -212,50 +212,22 @@
       <div class="form-row">
         <div class="form-group">
           <label for="firstName">Förnamn</label>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            placeholder="Anna"
-            required
-            autocomplete="given-name"
-          />
+          <input type="text" id="firstName" name="firstName" placeholder="Anna" required autocomplete="given-name" />
         </div>
         <div class="form-group">
           <label for="lastName">Efternamn</label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            placeholder="Svensson"
-            required
-            autocomplete="family-name"
-          />
+          <input type="text" id="lastName" name="lastName" placeholder="Svensson" required autocomplete="family-name" />
         </div>
       </div>
 
       <div class="form-group">
         <label for="email">E-postadress</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="anna@exempel.se"
-          required
-          autocomplete="email"
-        />
+        <input type="email" id="email" name="email" placeholder="anna@exempel.se" required autocomplete="email" />
       </div>
 
       <div class="form-group">
         <label for="phone">Telefonnummer</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="+46 70 000 00 00"
-          required
-          autocomplete="tel"
-        />
+        <input type="tel" id="phone" name="phone" placeholder="+46 70 000 00 00" required autocomplete="tel" />
       </div>
 
       <button type="submit">Anmäl mig till eventet</button>
@@ -273,7 +245,6 @@
   <script>
     const form = document.getElementById('regForm');
     const successMsg = document.getElementById('successMsg');
-
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       if (!form.checkValidity()) {
