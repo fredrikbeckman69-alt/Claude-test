@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-event 31 maj</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0f0f1a;
+      color: #e8e8f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #6c63ff, #48cfad);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      background: linear-gradient(135deg, #ffffff 30%, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+
+    .date-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: #a78bfa;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .date-row svg {
+      flex-shrink: 0;
+    }
+
+    .description {
+      color: #9a9ab0;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .card {
+      background: #16162a;
+      border: 1px solid #2a2a45;
+      border-radius: 1.25rem;
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 8px 40px rgba(108, 99, 255, 0.15);
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1.75rem;
+      color: #ffffff;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.1rem;
+    }
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #c4c4d8;
+    }
+
+    input {
+      background: #0f0f1a;
+      border: 1px solid #2a2a45;
+      border-radius: 0.6rem;
+      color: #e8e8f0;
+      font-size: 0.95rem;
+      padding: 0.7rem 0.9rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      width: 100%;
+    }
+
+    input::placeholder {
+      color: #4a4a68;
+    }
+
+    input:focus {
+      border-color: #6c63ff;
+      box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+    }
+
+    input:invalid:not(:placeholder-shown) {
+      border-color: #f87171;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 0.85rem;
+      background: linear-gradient(135deg, #6c63ff, #48cfad);
+      border: none;
+      border-radius: 0.6rem;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+
+    button[type="submit"]:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    button[type="submit"]:active {
+      transform: translateY(0);
+    }
+
+    .success {
+      display: none;
+      text-align: center;
+      padding: 1.5rem 0 0.5rem;
+    }
+
+    .success .checkmark {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .success p {
+      color: #9a9ab0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .success strong {
+      color: #e8e8f0;
+    }
+
+    @media (max-width: 400px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .card {
+        padding: 1.75rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="badge">Evenemang</div>
+    <h1>Framtidens AI&nbsp;&ndash; en kväll om möjligheter</h1>
+    <div class="date-row">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+      </svg>
+      Lördag 31 maj 2025
+    </div>
+    <p class="description">
+      Häng med oss för en inspirerande kväll om artificiell intelligens &ndash; hur tekniken förändrar vardagen, arbetslivet och framtiden. Nätverka, lyssna och lär.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Anmäl dig nu</h2>
+
+    <form id="regForm" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">Förnamn</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="Anna"
+            required
+            autocomplete="given-name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Efternamn</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="Svensson"
+            required
+            autocomplete="family-name"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-postadress</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="anna@exempel.se"
+          required
+          autocomplete="email"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Telefonnummer</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="+46 70 000 00 00"
+          required
+          autocomplete="tel"
+        />
+      </div>
+
+      <button type="submit">Anmäl mig till eventet</button>
+    </form>
+
+    <div class="success" id="successMsg">
+      <div class="checkmark">✅</div>
+      <p>
+        <strong>Tack för din anmälan!</strong><br />
+        Vi har tagit emot din registrering och återkommer med mer information inför den 31 maj.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('regForm');
+    const successMsg = document.getElementById('successMsg');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.querySelectorAll('input').forEach(input => input.reportValidity());
+        return;
+      }
+      form.style.display = 'none';
+      successMsg.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
